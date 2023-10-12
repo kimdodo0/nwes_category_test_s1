@@ -60,6 +60,8 @@ for l in range(2,4):
     df_titles = pd.concat([df_titles, df_section_title], ignore_index=True)
     df_titles.to_csv('./crawling_data/crawling_data.csv', index=False)
 
+driver.close()  #중복제거
+
 
 print(df_titles.head())
 df_titles.info()
